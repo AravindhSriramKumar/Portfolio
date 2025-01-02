@@ -14,6 +14,7 @@ function Skills() {
         <li>Machine Learning</li>
         <li>Control Systems</li>
         <li>C/C++</li>
+        <li>Embedded Systems</li>
       </ul>
     </section>
   );
