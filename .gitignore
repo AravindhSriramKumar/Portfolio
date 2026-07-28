@@ -1,0 +1,5 @@
+.agents/
+.codex/
+.claude/
+Prompt_To_gen_Portfolio.txt
+.DS_Store

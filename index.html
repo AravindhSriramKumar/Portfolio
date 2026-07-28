@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aravindh Sriram Kumar A G - Research Associate at IIT Madras working on multi-modal sensing for energy-efficient edge AI."
+    />
+    <title>Aravindh Sriram Kumar A G</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #fcfcfa;
+        --fg: #151515;
+        --muted: #595959;
+        --line: #d8d8d1;
+        --link: #0b57d0;
+        --year-col: 90px;
+        --logo-col: 92px;
+        --timeline-gap: 1.15rem;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        line-height: 1.65;
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 56px 24px 72px;
+      }
+
+      h1,
+      h2,
+      p,
+      ul,
+      li {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 0.35rem;
+        font-size: clamp(1.9rem, 4vw, 2.4rem);
+        line-height: 1.12;
+        font-weight: 650;
+        letter-spacing: -0.03em;
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: minmax(220px, 260px) 1fr;
+        gap: 1.6rem;
+        align-items: start;
+      }
+
+      .portrait {
+        margin: 0;
+        width: 100%;
+      }
+
+      .portrait img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center 25%;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+      }
+
+      .subtitle {
+        margin-bottom: 0.55rem;
+        color: var(--muted);
+      }
+
+      .tagline {
+        margin-bottom: 0.9rem;
+        color: #7b7b7b;
+        font-size: 1.15rem;
+        font-style: italic;
+        line-height: 1.45;
+      }
+
+      .links {
+        margin: 1rem 0 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.7rem;
+        height: 2.7rem;
+        border-radius: 50%;
+        background: #3b3b3b;
+        color: #ffffff;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .social-link svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        fill: currentColor;
+      }
+
+      .social-link.scholar svg {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+
+      .social-link:hover,
+      .social-link:focus-visible {
+        background: #242424;
+        text-decoration: none;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus-visible {
+        text-decoration: underline;
+      }
+
+      hr {
+        margin: 2rem 0;
+        border: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      section {
+        margin-top: 2.5rem;
+      }
+
+      h2 {
+        margin-bottom: 1.1rem;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .timeline {
+        position: relative;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: calc(
+          var(--year-col) + var(--timeline-gap) + (var(--logo-col) / 2)
+        );
+        top: 0.5rem;
+        bottom: 0.5rem;
+        width: 2px;
+        background: var(--line);
+      }
+
+      .entry {
+        position: relative;
+        display: grid;
+        grid-template-columns: var(--year-col) var(--logo-col) 1fr;
+        gap: var(--timeline-gap);
+        align-items: start;
+        margin-bottom: 2rem;
+      }
+
+      .period {
+        padding-top: 0.25rem;
+        color: #a3a3a3;
+        font-size: 0.95rem;
+        line-height: 1.25;
+        text-align: right;
+      }
+
+      .timeline-mark {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+
+      .timeline-mark::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0.25rem;
+        width: 12px;
+        height: 12px;
+        margin-left: -6px;
+        border-radius: 50%;
+        background: #d7d7d7;
+        border: 2px solid var(--bg);
+      }
+
+      .logo-card {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.55rem;
+        width: 88px;
+        min-height: 88px;
+        border: 1px solid #ecece6;
+        border-radius: 10px;
+        background: #fffefb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.65rem;
+      }
+
+      .entry-logo {
+        display: block;
+        max-width: 100%;
+        max-height: 68px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .period.ghost {
+        visibility: hidden;
+      }
+
+      .entry-copy p:last-child {
+        margin-bottom: 0;
+      }
+
+      .plain-list {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      .plain-list li + li {
+        margin-top: 0.85rem;
+      }
+
+      footer {
+        margin-top: 3rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 760px) {
+        :root {
+          --year-col: 56px;
+          --logo-col: 72px;
+          --timeline-gap: 0.8rem;
+        }
+
+        main {
+          padding: 36px 18px 56px;
+        }
+
+        .intro {
+          grid-template-columns: 1fr;
+          gap: 1.1rem;
+        }
+
+        .portrait {
+          max-width: 220px;
+        }
+
+        .period {
+          font-size: 0.85rem;
+        }
+
+        .logo-card {
+          width: 72px;
+          min-height: 72px;
+          padding: 0.35rem;
+        }
+
+        .entry-logo {
+          max-height: 54px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="intro">
+        <figure class="portrait">
+          <img
+            src="assets/Dp.jpeg"
+            alt="Portrait of Aravindh Sriram Kumar A G"
+          />
+        </figure>
+        <div>
+          <h1>Aravindh Sriram Kumar A G</h1>
+          <p class="subtitle">
+            Research Scholar at the Department of Computer Science and
+            Engineering, IIT Madras.
+          </p>
+          <p class="tagline">
+            I work in multi-modal sensing building intelligent systems.
+          </p>
+          <p>
+            My research sits at the intersection of vision, wireless sensing,
+            signal processing, and efficient machine intelligence for
+            deployable systems. I am especially interested in 
+            multi-modal frameworks that remain robust, resource-aware and
+            useful in real-world environments.
+          </p>
+          <ul class="links" aria-label="Social links">
+            <li>
+              <a
+                class="social-link"
+                href="https://github.com/AravindhSriramKumar"
+                aria-label="GitHub"
+              >
+                <svg viewBox="0 0 16 16" aria-hidden="true">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38
+                    0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+                    -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+                    .07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
+                    -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.7 7.7 0 0 1 8 4.68c.68 0 1.36.09
+                    2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+                    0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2
+                    0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+                  />
+                </svg></a
+              >
+            </li>
+            <li>
+              <a
+                class="social-link scholar"
+                href="https://scholar.google.com/citations?user=GAuMK3MAAAAJ&amp;hl=en"
+                aria-label="Google Scholar"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 3 1.5 8.25 12 13.5l8.56-4.28V16h1.94V8.25L12 3Zm-6.75 9.9V17c0
+                    2.9 4 4.95 6.75 4.95S18.75 19.9 18.75 17v-4.1L12 16.2 5.25 12.9Z"
+                  />
+                </svg></a
+              >
+            </li>
+            <li>
+              <a
+                class="social-link"
+                href="https://linkedin.com/in/aravindhsriramkumar"
+                aria-label="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.38a1.56 1.56 0 0 1 0 3.12ZM5.6
+                    9.8h2.68V18H5.6V9.8Zm4.36 0h2.56v1.12h.04c.36-.67 1.23-1.37 2.54-1.37
+                    2.72 0 3.22 1.79 3.22 4.11V18h-2.67v-3.84c0-.92-.02-2.1-1.28-2.1-1.29
+                    0-1.49 1-1.49 2.03V18H9.96V9.8Z"
+                  />
+                </svg></a
+              >
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <hr />
+
+      <section aria-labelledby="Timeline-title">
+        <h2 id="Timeline-title">Timeline</h2>
+        <div class="Timeline">
+          <div class="entry">
+            <div class="period">2025 -<br />present</div>
+            <div class="Timeline-mark">
+              <div class="logo-card">
+                <img
+                  class="entry-logo"
+                  src="assets/IIT_Madras_logo.svg"
+                  alt="IIT Madras logo"
+                />
+              </div>
+            </div>
+            <div class="entry-copy">
+              <p>
+                I am a M.S. Research Scholar at IIT Madras, working under the
+                coordination of Prof. Ayon Chakraborty. My current work focuses
+                on a multi-modal traffic intersection sensing framework that fuses different sensing modalities.
+              </p>
+              <p>
+                The broader goal is to build edge-native perception systems that
+                remain accurate, scalable and practical in dynamic urban
+                environments.
+              </p>
+            </div>
+          </div>
+
+            <div class="entry">
+            <div class="period ghost" aria-hidden="true">2024 -<br />2025</div>
+            <div class="timeline-mark">
+              <div class="logo-card">
+                <img
+                  class="entry-logo"
+                  src="assets/InsituMicron_Logo.svg"
+                  alt="InsituMicron logo"
+                />
+              </div>
+            </div>
+            <div class="entry-copy">
+              <p>
+                I then joined InsituMicron, where I worked for nine months on
+                software development for a biaxial testing solution, gaining
+                hands-on experience in engineering a software tool handling end to end
+                product delivery for their clients.
+              </p>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="period">2024 -<br />2025</div>
+            <div class="timeline-mark">
+              <div class="logo-card">
+                <img
+                  class="entry-logo"
+                  src="assets/Bosch_Logo.svg"
+                  alt="Bosch logo"
+                />
+              </div>
+            </div>
+            <div class="entry-copy">
+              <p>
+                I worked at Bosch Global Software Technologies where I
+                spent six months as an intern contributing to testing workflows
+                in the Air Systems software module and built UI dashboard to manage Software 
+                delivery validation.
+              </p>
+            </div>
+          </div>
+
+        
+
+          <div class="entry">
+            <div class="period">2020 -<br />2024</div>
+            <div class="timeline-mark">
+              <div class="logo-card">
+                <img
+                  class="entry-logo"
+                  src="assets/PSG_College_of_Technology_logo.svg"
+                  alt="PSG College of Technology logo"
+                />
+              </div>
+            </div>
+            <div class="entry-copy">
+              <p>
+                I completed my B.E. in Instrumentation and Control Engineering
+                at PSG College of Technology, Coimbatore. This training grounded
+                me in sensing systems, control, signal analysis and embedded
+                engineering.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="projects-title">
+        <h2 id="projects-title">Featured projects</h2>
+        <ul class="plain-list">
+          <li>
+            <strong>EcoVis Framework.</strong> A task-aware modality selection is implemented 
+            in the framework which chooses the most effective sensing pathway according
+            to utility. This enables more efficient multi-modal inference under edge
+            deployment constraints.
+          </li>
+          <li>
+            <strong>Wireless Digital Twins &amp; RTI.</strong> A pipeline for
+            spatial understanding that combines structure-from-motion, Gaussian
+            splatting, and SAGD-based segmentation to reconstruct 3D layouts,
+            while estimating material properties through radio tomographic
+            imaging within the ARGOS system.
+          </li>
+          <li>
+            <strong>Signal Processing Toolbox.</strong> A collection of custom
+            implementations for singular value decomposition, constant false
+            alarm rate filtering and 2D filtering primitives optimized for raw
+            UWB CIR and Wi-Fi CSI processing, designed to support reliable
+            downstream sensing and localization tasks.
+          </li>
+          <li>
+            <strong>KLA AI Hackathon, March 2026.</strong> Built a
+            high-fidelity image restoration pipeline targeting denoising and
+            super-resolution on the hackathon dataset, with an emphasis on
+            perceptual quality and faithful detail recovery.
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="publications-title">
+        <h2 id="publications-title">Publications</h2>
+        <ul class="plain-list">
+          <li>
+            A. Datta, T. V. U, A. S. K. A. G and A. Chakraborty, "ARGOS:
+            Leveraging Visual Priors for Scalable Wireless Navigation in Dynamic
+            Environments," 2026 IEEE International Conference on Pervasive
+            Computing and Communications (PerCom), Pisa, Italy, 2026, pp. 1-11.
+          </li>
+          <li>
+            Y. Shankar, A. S. Kumar and A. Chakraborty, "Less is More:
+            Improving WiFi Localization Accuracy with Fewer Scans," 2026 18th
+            International Conference on COMmunication Systems and NETworks
+            (COMSNETS), Bengaluru, India, 2026, pp. 121-129.
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        Inspired by <a href="https://karpathy.ai/">karpathy.ai</a> 
+      </footer>
+    </main>
+  </body>
+</html>
